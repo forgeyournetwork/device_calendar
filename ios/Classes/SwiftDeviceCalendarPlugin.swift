@@ -698,6 +698,7 @@ public class SwiftDeviceCalendarPlugin: NSObject, FlutterPlugin {
         let ekAttendeeClass: AnyClass? = NSClassFromString("EKAttendee")
         if let type = ekAttendeeClass as? NSObject.Type {
             let participant = type.init()
+            participant.setValue(UUID().uuidString, forKey: "UUID")
             participant.setValue(name, forKey: "displayName")
             participant.setValue(emailAddress, forKey: "emailAddress")
             participant.setValue(role, forKey: "participantRole")
