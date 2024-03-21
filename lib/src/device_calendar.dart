@@ -171,7 +171,7 @@ class DeviceCalendarPlugin {
     String? eventId,
     int? startDate,
     int? endDate,
-    bool deleteFollowingInstances,
+    bool? deleteFollowingInstances,
   ) async {
     return _invokeChannelMethod(
       ChannelConstants.methodNameDeleteEventInstance,

@@ -166,6 +166,8 @@ class Event {
           at?.emailAddress == organiser.emailAddress);
       if (attendee != null) {
         attendee.isOrganiser = true;
+      } else {
+        attendees?.add(organiser);
       }
     }
 
